@@ -19,16 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a679c18a-e648-4f5f-b7f2-fdc5438ff7cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/SortsAndSearches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BinarySearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BubbleSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/InsertionSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/LinearSearch.java" beforeDir="false" />
+    <list default="true" id="a679c18a-e648-4f5f-b7f2-fdc5438ff7cf" name="Default Changelist" comment="Update 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/QuickSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SelectionSort.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +79,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596761024643</updated>
-      <workItem from="1596761026011" duration="6229000" />
+      <workItem from="1596761026011" duration="6382000" />
+      <workItem from="1596956832224" duration="149000" />
+      <workItem from="1596957689439" duration="3591000" />
     </task>
+    <task id="LOCAL-00001" summary="Update 1">
+      <created>1596855652144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596855652144</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update 1">
+      <created>1596855672386</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596855672386</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,11 +110,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="106" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1596852847921">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="106" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1366.728@0.0.1366.728" timestamp="1596852847921" />
+    <state width="1325" height="2" key="GridCell.Tab.0.bottom" timestamp="1596961154415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596961154415" />
+    <state width="1325" height="2" key="GridCell.Tab.0.center" timestamp="1596961154415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596961154415" />
+    <state width="1325" height="2" key="GridCell.Tab.0.left" timestamp="1596961154415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596961154415" />
+    <state width="1325" height="2" key="GridCell.Tab.0.right" timestamp="1596961154415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596961154415" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1596855656202">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596855656202" />
   </component>
 </project>

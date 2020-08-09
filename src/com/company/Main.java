@@ -15,6 +15,11 @@ public class Main {
     final private static Scanner scanner = new Scanner(System.in);
     final private static int MAXSIZE = 1000;
     private static int[] dataset = new int[0];
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+
 
     /**
      * Main Execution Method, Runs the interface of the program
@@ -24,12 +29,12 @@ public class Main {
 
         boolean quit = false;
         boolean ascending = true;
-        printMenu();
+
         while (!quit) {
-            System.out.println("8) Print The Menu Again");
-            System.out.println("0) Quit");
-            System.out.println();
-            int selection = promptUser("Enter a Menu Option");
+            System.out.println();//aesthetic
+            printMenu();
+            System.out.println();//aesthetic
+            int selection = promptUser("Enter a Menu Option: ");
             switch (selection) {
                 case (1):
                     dataset = setArraySize();
@@ -76,7 +81,8 @@ public class Main {
     private static void ssArraySelection(int[] data, boolean ascending) {
         int selection;
         ssArraySelectionMenu();
-        selection = promptUser("Would you like to Search or Sort?: ");
+        selection = promptUser("Would you like to " + ANSI_GREEN + " Search " +
+                                ANSI_RESET + " or " + ANSI_GREEN + " Sort?: " + ANSI_RESET);
         switch (selection) {
             case (1):
                 sortArraySelection(data, ascending);
@@ -100,11 +106,12 @@ public class Main {
         switch (selection) {
             case (1):
                 searchArray(1, data);
+                break;
             case (2):
-                System.out.println("Sorting Data....");
+                System.out.println(ANSI_RED + "Data must be sorted for Binary Search, Sorting Now...." + ANSI_RESET);
                 quickSort(data);
-                searchArray(2, data)
-                ; break;
+                searchArray(2, data);
+                break;
         }
     }
 
@@ -117,12 +124,12 @@ public class Main {
     private static void searchArray(int searchMethod, int[] data){
         int result = -1;
         if(searchMethod == 1){
-            result = linearSearch(promptUser("What Number would you like to search for?: "), data);
+            result = linearSearch(promptUser("What Number would you like to search for: "), data);
         } else if(searchMethod == 2){
             result = binarySearch(promptUser("What Number would you like to search for?: "), data);
         }
         if(result == -1){
-            System.out.println("Index not found");
+            System.out.println(ANSI_RED + "Index not found" + ANSI_RESET);
         } else{
             System.out.println("Found at Index: " + result);
         }
@@ -167,18 +174,16 @@ public class Main {
 
     /**
      * prints the array horizontally with line break every 20 numbers
-     * automatically prints the menu after executing for better user experience
      * @param data int array dataset to be printed
      */
     private static void printArray(int[] data) {
         for (int i = 0; i < data.length; i++) {
-            System.out.print(data[i] + " ");
-            if (i % 20 == 0 && i > 0) {
+            System.out.print(data[i] + "\t");
+            if (i % 20 == 0) {
                 System.out.println();
             }
         }
         System.out.println();
-        printMenu();
 
     }
 
@@ -227,10 +232,10 @@ public class Main {
      */
     private static int[] setArraySize() {
         int size = promptUser("How Big Should the Array Be?: ");
-        if (size < MAXSIZE) {
+        if (size <= MAXSIZE) {
             return new int[size];
         } else {
-            System.out.println("Input Above Max size of " + MAXSIZE);
+            System.out.println(ANSI_RED + "Input Above Max size of " + MAXSIZE + ANSI_RESET);
             return new int[0];
         }
     }
@@ -252,7 +257,7 @@ public class Main {
             return user_input1;
         } catch (Exception e) {
             while (user_input1 < 0) {
-                System.out.println("Invalid Entry, Please Enter a Positive Integer: ");
+                System.out.println(ANSI_RED + "Invalid Entry, Please Enter a Positive Integer: " + ANSI_RESET);
                 scanner.nextLine();
                 if (scanner.hasNextInt()) {
                     user_input1 = scanner.nextInt();
@@ -268,50 +273,50 @@ public class Main {
      * prints the user interface menu
      */
     public static void printMenu() {
-        System.out.println("Sorting and Searching Demo");
+        System.out.println(ANSI_CYAN + "           Main Menu      ");
         System.out.println("==========================");
         System.out.println("1) Select Array Size");
         System.out.println("2) Fill Array Sequentially");
         System.out.println("3) Fill Array Randomly");
         System.out.println("4) Shuffle Existing Array");
         System.out.println("5) Print Array Contents");
-        System.out.println("6) Sorting Selection Menu");
-        System.out.println("7) Toggle Ascending/Descending Sorting Order");
-        System.out.println("--------------------------");
+        System.out.println("6) Searching/Sorting Selection Menu");
+        System.out.println("7) Toggle Sorting Order (ASC/DESC)");
+        System.out.println("--------------------------" + ANSI_RESET);
     }
 
     /**
      * prints the menu allowing for the user to pick searching or sorting
      */
     public static void ssArraySelectionMenu() {
-        System.out.println("Sort/Search Selection Menu");
+        System.out.println(ANSI_CYAN + "Sort/Search Selection Menu");
         System.out.println("==========================");
         System.out.println("1) Sorting");
-        System.out.println("2) Searching");
+        System.out.println("2) Searching" + ANSI_RESET);
     }
 
     /**
      * prints the sorting selection menu
      */
     public static void sortArraySelectionMenu() {
-        System.out.println("Sorting Selection");
+        System.out.println(ANSI_CYAN + "Sorting Selection Menu");
         System.out.println("=================");
         System.out.println("1) Bubble Sort");
         System.out.println("2) Selection Sort");
         System.out.println("3) Insertion Sort");
         System.out.println("4) QuickSort");
-        System.out.println("-----------------");
+        System.out.println("-----------------" + ANSI_RESET);
     }
 
     /**
      * prints the searching selection menu
      */
     public static void searchArraySelectionMenu() {
-        System.out.println("Search Selection");
+        System.out.println(ANSI_CYAN + "Search Selection Menu");
         System.out.println("================");
         System.out.println("1) Linear Search");
         System.out.println("2) Binary Search");
-        System.out.println("----------------");
+        System.out.println("----------------" + ANSI_RESET);
     }
 
     /**
